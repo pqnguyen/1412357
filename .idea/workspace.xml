@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99d488b8-4f86-42ba-8917-5b0b8c177c1a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/async-components/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/.keep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/async-components/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/.keep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/.keep" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -76,37 +76,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assets/.keep">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/async-components/.keep">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/.keep">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/.keep">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pages/.keep">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -198,12 +168,6 @@
               <item name="twitter" type="b2602c69:ProjectViewProjectNode" />
               <item name="twitter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="twitter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="twitter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="twitter" type="b2602c69:ProjectViewProjectNode" />
@@ -333,7 +297,7 @@
       <option name="presentableId" value="Default" />
       <updated>1543637864663</updated>
       <workItem from="1543637865909" duration="1267000" />
-      <workItem from="1543639870526" duration="5808000" />
+      <workItem from="1543639870526" duration="6118000" />
     </task>
     <task id="LOCAL-00001" summary="init base structure for react project">
       <created>1543648757354</created>
@@ -346,7 +310,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7075000" />
+    <option name="totallyTimeSpent" value="7385000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -553,10 +517,10 @@
     <entry file="file://$PROJECT_DIR$/src/components/.keep">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/.keep">
+    <entry file="file://$PROJECT_DIR$/src/pages/.keep">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/.keep">
+    <entry file="file://$PROJECT_DIR$/src/containers/.keep">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
