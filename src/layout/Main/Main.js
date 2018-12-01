@@ -3,6 +3,9 @@ import {connect} from "react-redux";
 import {Route, Switch, withRouter} from "react-router-dom";
 
 import routeMapping from "src/routes/routeMapping";
+import BaseLayout from "src/components/Layout/Layout";
+import Header from "src/layout/Main/components/Header/Header";
+import Content from "src/layout/Main/components/Content/Content";
 
 class Main extends Component {
     constructor(props) {
@@ -17,11 +20,14 @@ class Main extends Component {
 
     render() {
         return (
-            <div style={{minHeight: "100vh", minWidth: "1380px"}}>
-                <Switch>
-                    {this.routes}
-                </Switch>
-            </div>
+            <BaseLayout style={{backgroundColor: "#F0F2F5"}}>
+                <Header>Header</Header>
+                <Content>
+                    <Switch>
+                        {this.routes}
+                    </Switch>
+                </Content>
+            </BaseLayout>
         );
     }
 }

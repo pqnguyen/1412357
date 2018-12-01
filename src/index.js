@@ -8,6 +8,7 @@ import routes from "src/routes/routes"
 import * as serviceWorker from 'src/serviceWorker';
 
 import 'src/index.css';
+import 'antd/dist/antd.css';
 
 ReactDOM.render((
     <BrowserRouter>

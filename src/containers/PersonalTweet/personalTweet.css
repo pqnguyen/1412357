@@ -1,0 +1,17 @@
+.action-item {
+    margin-right: 60px;
+    font-size: 13px;
+}
+
+.js-tweet-text-container {
+    padding: 10px 0 10px;
+}
+
+.stream-item-header span {
+    margin-right: 5px;
+}
+
+span.account-name {
+    color: black;
+    font-weight: bolder;
+}
