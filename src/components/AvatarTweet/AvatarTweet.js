@@ -16,7 +16,7 @@ class AvatarTweet extends Component {
 
     render() {
         if (this.props.src) {
-            return <Avatar src={this.props.src}/>;
+            return <Avatar className="avatar" src={this.props.src}/>;
         } else {
             return <Avatar size={this.props.size} icon="user"/>;
         }

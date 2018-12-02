@@ -1,9 +1,12 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import {Card, Row, Col, Input, Icon, Button} from "antd";
+import {Card, Row, Col, Input} from "antd";
 
 import AvatarTweet from "src/components/AvatarTweet/AvatarTweet";
 import IconButton from "src/components/IconButton/IconButton";
+import TweetButton from 'src/components/TweetButton/TweetButton';
+
+import {iconMenuItems} from 'src/constants/menuItems';
 
 import "./timelineTweet.css";
 
@@ -54,27 +57,17 @@ class TimelineTweet extends Component {
                         paddingTop: 10,
                     }}>
                         <Col offset={3} span={18}>
-                            <IconButton type="picture" style={{
-                                fontSize: 25,
-                                color: "#1DA1F2",
-                            }} />
-                            <IconButton type="paper-clip" style={{
-                                fontSize: 25,
-                                color: "#1DA1F2",
-                            }} />
-                            <IconButton type="bar-chart" style={{
-                                fontSize: 25,
-                                color: "#1DA1F2",
-                            }} />
-                            <IconButton type="environment" style={{
-                                fontSize: 25,
-                                color: "#1DA1F2",
-                            }} />
+                            {iconMenuItems.map((item, idx) => (
+                                <IconButton type={item.type} style={{
+                                    fontSize: 25,
+                                    color: "#1DA1F2",
+                                }}/>
+                            ))}
                         </Col>
                         <Col>
-                            <Button type="primary" style={{fontWeight:"bold", borderRadius:25}}>
+                            <TweetButton>
                                 Tweet
-                            </Button>
+                            </TweetButton>
                         </Col>
                     </Row>
                 )}

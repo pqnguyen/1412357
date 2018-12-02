@@ -6,11 +6,11 @@ import "./dashboardProfileCard.css";
 
 class DashboardProfileCard extends Component {
     render() {
-        const [name, screenName, tweets, following] = ["Nguyen", "@Nguyen25598353", 1, 3];
+        const [name, screenName, tweets, following, followers] = ["Nguyen", "@Nguyen25598353", 1, 3, 2];
 
         const cover = <img alt="example"
-                           src="https://watermarked.cutcaster.com/cutcaster-photo-800910916-Beautiful-female-hands-with-water.jpg"
-                           style={{height: 95}}/>;
+            src="https://watermarked.cutcaster.com/cutcaster-photo-800910916-Beautiful-female-hands-with-water.jpg"
+            style={{height: 95}}/>;
         return (
             <div>
                 <Card
@@ -34,20 +34,32 @@ class DashboardProfileCard extends Component {
                         <ul className="ProfileCardStats-statList Arrange Arrange--bottom Arrange--equal">
                             <li className="ProfileCardStats-stat Arrange-sizeFit">
                                 <a className="ProfileCardStats-statLink u-textUserColor u-linkClean u-block js-nav js-tooltip"
+                                   href="/" data-element-term="following_stats"
+                                   data-original-title="3 Following">
+                                    <span className="ProfileCardStats-statLabel u-block">Tweets</span>
+                                    <span className="ProfileCardStats-statValue" data-count="3" data-is-compact="false">
+                                        {tweets}
+                                    </span>
+                                </a>
+                            </li>
+                            <li className="ProfileCardStats-stat Arrange-sizeFit">
+                                <a className="ProfileCardStats-statLink u-textUserColor u-linkClean u-block js-nav js-tooltip"
                                    href="/" data-element-term="tweet_stats"
                                    data-original-title="0 Tweets">
-                                    <span className="ProfileCardStats-statLabel u-block">Tweets</span>
-                                    <span className="ProfileCardStats-statValue" data-count="0"
-                                          data-is-compact="false">{tweets}</span>
+                                    <span className="ProfileCardStats-statLabel u-block">Following</span>
+                                    <span className="ProfileCardStats-statValue" data-count="0" data-is-compact="false">
+                                        {following}
+                                    </span>
                                 </a>
                             </li>
                             <li className="ProfileCardStats-stat Arrange-sizeFit">
                                 <a className="ProfileCardStats-statLink u-textUserColor u-linkClean u-block js-nav js-tooltip"
                                    href="/" data-element-term="following_stats"
                                    data-original-title="3 Following">
-                                    <span className="ProfileCardStats-statLabel u-block">Following</span>
-                                    <span className="ProfileCardStats-statValue" data-count="3"
-                                          data-is-compact="false">{following}</span>
+                                    <span className="ProfileCardStats-statLabel u-block">Followers</span>
+                                    <span className="ProfileCardStats-statValue" data-count="3" data-is-compact="false">
+                                        {followers}
+                                    </span>
                                 </a>
                             </li>
                         </ul>

@@ -15,3 +15,18 @@ export const menuItems = [
         iconType: "message"
     }
 ];
+
+export const iconMenuItems = [
+    {
+        type: "picture"
+    },
+    {
+        type: "paper-clip"
+    },
+    {
+        type: "bar-chart"
+    },
+    {
+        type: "environment"
+    }
+];
