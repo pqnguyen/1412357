@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import {Card, Row, Col, Avatar, Icon} from "antd";
+import {Card, Row, Col, Icon} from "antd";
+
+import AvatarTweet from "src/components/AvatarTweet/AvatarTweet";
 
 import "./personalTweet.css";
 
@@ -13,10 +15,10 @@ class PersonalTweet extends Component {
                 bodyStyle={{paddingTop: 10, paddingBottom: 10}}
             >
                 <Row>
-                    <Col span={4}>
-                        <Avatar size={64} icon="user"/>
+                    <Col span={3}>
+                        <AvatarTweet/>
                     </Col>
-                    <Col span={20}>
+                    <Col span={21}>
                         <div className="stream-item-header">
                             <span className="account-name">{name}</span>
                             <span className="account-screen-name">{screenName}</span>
