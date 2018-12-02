@@ -1,0 +1,4 @@
+.tweet-input::placeholder {
+    color: "#1DA1F2";
+    opacity: 1;
+}
