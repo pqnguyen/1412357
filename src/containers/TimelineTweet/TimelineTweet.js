@@ -58,14 +58,14 @@ class TimelineTweet extends Component {
                     }}>
                         <Col offset={3} span={18}>
                             {iconMenuItems.map((item, idx) => (
-                                <IconButton type={item.type} style={{
+                                <IconButton key={idx} type={item.type} style={{
                                     fontSize: 25,
                                     color: "#1DA1F2",
                                 }}/>
                             ))}
                         </Col>
                         <Col>
-                            <TweetButton>
+                            <TweetButton type="primary">
                                 Tweet
                             </TweetButton>
                         </Col>

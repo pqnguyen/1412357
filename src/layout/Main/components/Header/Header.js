@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import {Col, Layout, Menu, Row, Icon, Button} from "antd";
+import {Col, Layout, Menu, Row, Icon} from "antd";
 import {Link} from "react-router-dom";
 
-import {menuItems} from "src/constants/menuItems";
+import {menuItems,rightMenuItems} from "src/constants/menuItems";
 import AvatarTweet from "src/components/AvatarTweet/AvatarTweet";
 import TweetButton from 'src/components/TweetButton/TweetButton';
 
@@ -50,19 +50,21 @@ class BaseHeader extends Component {
                                 <MenuItemGroup title={<div>
                                         <b style={{fontSize:18,fontWeight:"bold",color:"#000"}}>Phạm Khắc Quyền</b><br/>
                                         <span style={{fontSize:15,}}>@QuyenPhamKhac</span>
-                                    </div>} style={{borderBottom:"1px solid grey"}}
+                                    </div>}
                                     style={{borderBottom:"0.03rem solid rgba(40, 46, 50, 0.3)"}}>
-                                </MenuItemGroup>
-                                <MenuItemGroup title={null} style={{padding:0}}>
-                                    <Menu.Item key="profile"><Icon type="user" />Profile</Menu.Item>
-                                    <Menu.Item key="settings"><Icon type="setting" />Settings</Menu.Item>
-                                    <Menu.Item key="signout"><Icon type="logout" />Sign Out</Menu.Item>
+                                    {rightMenuItems.map((menuItem, index) => (
+                                        <Menu.Item key={index}>
+                                            <Link to={menuItem.path}>
+                                                <Icon type={menuItem.iconType} /> {menuItem.title}
+                                            </Link>
+                                        </Menu.Item>
+                                    ))}
                                 </MenuItemGroup>
                             </SubMenu>
                             <Menu.Item  style={{
                                 borderBottom: 0,
                             }}>
-                                <TweetButton>
+                                <TweetButton type="primary">
                                     Tweet
                                 </TweetButton>
                             </Menu.Item>

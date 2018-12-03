@@ -1,3 +1,4 @@
 export default {
-    HOME: "/"
+    HOME: "/",
+    PROFILE: "/profile"
 }

@@ -6,7 +6,7 @@ const {Content} = Layout;
 class BaseContent extends Component {
     render() {
         return (
-            <Row style={{padding: '0 50px', marginTop: 60}}>
+            <Row style={Object.assign({},{padding: '0 50px', marginTop: 60}, this.props.style)}>
                 <Col span={22} offset={1}>
                     <Content>
                         {this.props.children}

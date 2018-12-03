@@ -30,3 +30,16 @@ export const iconMenuItems = [
         type: "environment"
     }
 ];
+
+export const rightMenuItems = [
+     {
+        title: "Profile",
+        path: "/profile",
+        iconType: "user"
+    },
+    {
+        title: "Log out",
+        path: "/logout",
+        iconType: "logout"
+    }
+]
