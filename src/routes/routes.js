@@ -5,7 +5,7 @@ import Main from "src/layout/Main/Main";
 
 const routes = (
     <Switch>
-        <Route path={pagePaths.HOME} component={Main}/>
+        <Route path={pagePaths.MAIN_APP} component={Main}/>
     </Switch>
 );
 

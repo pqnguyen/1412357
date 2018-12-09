@@ -1,35 +1,28 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import {Route, Redirect, Switch,withRouter} from "react-router-dom";
+import {Redirect, Switch,withRouter} from "react-router-dom";
 
 import routeMapping from "src/routes/routeMapping";
 import BaseLayout from "src/components/Layout/Layout";
 import Header from "src/layout/Main/components/Header/Header";
+import {RouteWithSubRoutes} from "src/routes/routeWithSubRoutes";
 
-const RouteWithSubRoutes = (route) => {
-    return (
-        <Route
-            path={route.path}
-            render={props => (
-                <route.component {...props} routes={route.routes} />
-            )}
-        />
-    );
-}
-
-
+import pagePaths from "src/constants/pagePaths";
 
 class Main extends Component {
 
     render() {
+        const {location} = this.props;
         return (
             <BaseLayout style={{backgroundColor: "#F0F2F5"}}>
-                <Header>Header</Header>
+                {!["/login", "/about"].includes(location.pathname) && (
+                    <Header>Header</Header>
+                )}
                 <Switch>
                     {routeMapping.map((route, i) => (
                         <RouteWithSubRoutes key={i} {...route} />
                     ))}
-                    <Redirect from="/" to="/home" /> 
+                    <Redirect from={`${pagePaths.MAIN_APP}`} to={`${pagePaths.LOGIN}`} /> 
                 </Switch>
             </BaseLayout>
         );

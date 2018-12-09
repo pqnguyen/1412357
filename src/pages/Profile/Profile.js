@@ -1,24 +1,12 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {Row, Col, Icon, Card, Input} from "antd";
-import {Route, Redirect, Switch} from "react-router-dom";
-
+import {Redirect, Switch} from "react-router-dom";
 
 import Content from "src/layout/Main/components/Content/Content";
 import ProfileHeader from './components/ProfileHeader/ProfileHeader';
-
+import {RouteWithSubRoutes} from "src/routes/routeWithSubRoutes";
 import {appConfigs} from "src/constants/configs"; 
-
-const RouteWithSubRoutes = (route) => {
-    return (
-        <Route
-            path={route.path}
-            render={props => (
-                <route.component {...props} routes={route.routes} />
-            )}
-        />
-    );
-}
 
 class Profile extends Component {
     constructor(props) {

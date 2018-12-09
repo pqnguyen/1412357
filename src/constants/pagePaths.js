@@ -1,4 +1,7 @@
 export default {
-    HOME: "/",
-    PROFILE: "/profile"
+    MAIN_APP: "/",
+    HOME: "/home",
+    PROFILE: "/profile",
+    LOGIN: "/login",
+    ABOUT_US: "/about"
 }

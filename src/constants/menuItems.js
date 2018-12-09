@@ -42,4 +42,16 @@ export const rightMenuItems = [
         path: "/logout",
         iconType: "logout"
     }
+];
+
+export const loginMenuItems = [
+    {
+        title: "Home",
+        path: "/login",
+        iconType: "yuque"
+    },
+    {
+        title: "About us",
+        path: "/about",
+    }
 ]
