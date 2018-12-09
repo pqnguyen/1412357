@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyB68-QsZrMcVg7bRlvGFQ2E9RR5v_dFESs",
-  authDomain: "react-firebase-chatapp.firebaseapp.com",
-  databaseURL: "https://react-firebase-chatapp.firebaseio.com",
-  projectId: "react-firebase-chatapp",
-  storageBucket: "react-firebase-chatapp.appspot.com",
-  messagingSenderId: "859490043085"
+  apiKey: "AIzaSyDJS3cnMhxpoWAsgDVMJOSRoVS-Mkw6SMY",
+  authDomain: "dack-forestnetwork.firebaseapp.com",
+  databaseURL: "https://dack-forestnetwork.firebaseio.com",
+  projectId: "dack-forestnetwork",
+  storageBucket: "dack-forestnetwork.appspot.com",
+  messagingSenderId: "1078583313668"
 };
 
 export {
