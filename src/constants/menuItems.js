@@ -54,4 +54,19 @@ export const loginMenuItems = [
         title: "About us",
         path: "/about",
     }
-]
+];
+
+export const profileMenuItems = [
+    {
+        title: "Posts",
+        path: "/post"
+    },
+    {
+        title: "Following",
+        path: "/following",
+    },
+    {
+        title: "Follower",
+        path: "/follower",
+    }
+];

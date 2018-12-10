@@ -13,19 +13,19 @@ const routeMapping = [
         "component": Home
     },
     {
-        "path": pagePaths.PROFILE,
+        "path": `${pagePaths.PROFILE}/:profileId`,
         "component": Profile,
         "routes": [
             {
-                path: `${pagePaths.PROFILE}/tweet`,
+                path: `${pagePaths.PROFILE}/:profileId/post`,
                 component: ProfileTweet
             },
             {
-                path: `${pagePaths.PROFILE}/following`,
+                path: `${pagePaths.PROFILE}/:profileId/following`,
                 component: ProfileFollowing
             },
             {
-                path: `${pagePaths.PROFILE}/follower`,
+                path: `${pagePaths.PROFILE}/:profileId/follower`,
                 component: ProfileFollower
             }
         ]

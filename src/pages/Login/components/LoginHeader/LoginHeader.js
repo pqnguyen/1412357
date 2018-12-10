@@ -22,7 +22,7 @@ class LoginHeader extends Component {
                             {loginMenuItems.map((menuItem, index) =>
                                 <Menu.Item key={index}>
                                     <Link to={menuItem.path}>
-                                        {menuItem.iconType && <Icon type={menuItem.iconType}/>}
+                                        {menuItem.iconType && <Icon type={menuItem.iconType} theme="filled"/>}
                                         <b>{menuItem.title}</b>
                                     </Link>
                                 </Menu.Item>

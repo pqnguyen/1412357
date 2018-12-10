@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {Col, Layout, Menu, Row} from "antd";
 import {Link} from "react-router-dom";
 
+import {profileMenuItems} from "src/constants/menuItems";
+
 import AvatarTweet from "src/components/AvatarTweet/AvatarTweet";
 import TweetButton from 'src/components/TweetButton/TweetButton';
 
@@ -18,14 +20,14 @@ class ProfileHeader extends Component {
 
     render() {
         const {isMyPage} = this.state;
-        const {editing,match} = this.props;
+        const {editing, match, avatar} = this.props;
         return (
             <Header style={{width: '100%', backgroundColor: "#FFF", height: 60}}>
                 <Content style={{padding:"0 60px"}}>
                     <Row>
                         <Col span={6}>
                             <AvatarTweet size={220} 
-                                src="https://pbs.twimg.com/profile_images/1069150269902966784/L24DeNKF_400x400.jpg"
+                                src={avatar}
                                 style={{
                                     position: "absolute",
                                     top: -140,
@@ -42,21 +44,13 @@ class ProfileHeader extends Component {
                                 defaultSelectedKeys={['0']}
                                 style={{lineHeight: '60px'}}
                             >
-                                <Menu.Item key={0}>
-                                    <Link to={`${match.url}/tweet`}>
-                                        <b>Tweets</b>
-                                    </Link>
-                                </Menu.Item>
-                                <Menu.Item key={1}>
-                                    <Link to={`${match.url}/following`}>
-                                        <b>Following</b>
-                                    </Link>
-                                </Menu.Item>
-                                <Menu.Item key={2}>
-                                    <Link to={`${match.url}/follower`}>
-                                        <b>Follower</b>
-                                    </Link>
-                                </Menu.Item>
+                                {profileMenuItems.map((menuItem, index) => (
+                                    <Menu.Item key={index}>
+                                        <Link to={`${match.url}${menuItem.path}`}>
+                                            <b>{menuItem.title}</b>
+                                        </Link>
+                                    </Menu.Item>
+                                ))}
                             </Menu>
                         </Col>
                         <Col span={6}>
