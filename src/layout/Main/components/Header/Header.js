@@ -2,9 +2,13 @@ import React, {Component} from "react";
 import {Col, Layout, Menu, Row, Icon} from "antd";
 import {Link} from "react-router-dom";
 
-import {menuItems,rightMenuItems} from "src/constants/menuItems";
+import {connect} from "react-redux";
+
+import {menuItems} from "src/constants/menuItems";
 import AvatarTweet from "src/components/AvatarTweet/AvatarTweet";
-import TweetButton from 'src/components/TweetButton/TweetButton';
+
+//selector
+import {getMyProfile} from "src/selectors/profile";
 
 import './Header.css';
 
@@ -14,6 +18,7 @@ const MenuItemGroup = Menu.ItemGroup;
 
 class BaseHeader extends Component {
     render() {
+        const {profile} = this.props;
         return (
             <Header style={{position: 'fixed', zIndex: 1, width: '100%', backgroundColor: "#FFF", height: 46}}>
                 <Row>
@@ -44,30 +49,24 @@ class BaseHeader extends Component {
                                 style={{borderBottom:0,}}
                                 title={ <AvatarTweet 
                                     size={25} 
-                                    src="https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.0-1/p240x240/47286827_1110366432446545_851657281396277248_n.jpg?_nc_cat=107&_nc_ht=scontent.fsgn2-1.fna&oh=027d2ab5166d4d4998af7eaba8956dac&oe=5CAB7746" 
+                                    src={profile.avatar} 
                                 />}
                             >
                                 <MenuItemGroup title={<div>
-                                        <b style={{fontSize:18,fontWeight:"bold",color:"#000"}}>Phạm Khắc Quyền</b><br/>
-                                        <span style={{fontSize:15,}}>@QuyenPhamKhac</span>
+                                        <b style={{fontSize:18,fontWeight:"bold",color:"#000"}}>{profile.name}</b><br/>
+                                        <span style={{fontSize:15,}}>{profile.nickname}</span>
                                     </div>}
                                     style={{borderBottom:"0.03rem solid rgba(40, 46, 50, 0.3)"}}>
-                                    {rightMenuItems.map((menuItem, index) => (
-                                        <Menu.Item key={index}>
-                                            <Link to={menuItem.path}>
-                                                <Icon type={menuItem.iconType} /> {menuItem.title}
-                                            </Link>
-                                        </Menu.Item>
-                                    ))}
+                                    <Menu.Item key={0}>
+                                        <Link to={`/profile/${profile.id}`}>
+                                            <Icon type="user" /> Profile
+                                        </Link>
+                                    </Menu.Item>
+                                    <Menu.Item key={1}>
+                                        <Icon type="logout" /> Sign out
+                                    </Menu.Item>
                                 </MenuItemGroup>
                             </SubMenu>
-                            <Menu.Item  style={{
-                                borderBottom: 0,
-                            }}>
-                                <TweetButton type="primary">
-                                    Tweet
-                                </TweetButton>
-                            </Menu.Item>
                         </Menu>
                     </Col>
                 </Row>
@@ -76,4 +75,8 @@ class BaseHeader extends Component {
     }
 }
 
-export default BaseHeader;
+const mapStateToProps = (state) => ({
+    profile: getMyProfile(state),
+});
+
+export default connect(mapStateToProps, {})(BaseHeader);
