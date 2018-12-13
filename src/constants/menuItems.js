@@ -1,17 +1,17 @@
 export const menuItems = [
     {
         title: "Home",
-        path: "/",
+        path: "/home",
         iconType: "home"
     },
     {
         title: "Notifications",
-        path: "/notifications",
+        path: "/home",
         iconType: "bell"
     },
     {
         title: "Messages",
-        path: "/messages",
+        path: "/home",
         iconType: "message"
     }
 ];

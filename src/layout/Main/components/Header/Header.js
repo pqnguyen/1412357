@@ -20,7 +20,7 @@ class BaseHeader extends Component {
     render() {
         const {profile} = this.props;
         return (
-            <Header style={{position: 'fixed', zIndex: 1, width: '100%', backgroundColor: "#FFF", height: 46}}>
+            <Header style={{position: 'fixed', zIndex: 2, width: '100%', backgroundColor: "#FFF", height: 46}}>
                 <Row>
                     <Col span={18} offset={1}>
                         <Menu

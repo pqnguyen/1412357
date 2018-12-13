@@ -4,6 +4,7 @@ import TimelineTweet from "src/containers/TimelineTweet/TimelineTweet";
 
 class ProfileTweet extends Component {
     render() {
+        console.log(this.props);
         return (
             <React.Fragment>
                 <TimelineTweet />

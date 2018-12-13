@@ -32,7 +32,7 @@ class ProfileHeader extends Component {
                                     position: "absolute",
                                     top: -140,
                                     left: 20,
-                                    zIndex: 2,
+                                    zIndex: 1,
                                     border: "4px solid #fff"
                                 }} 
                             />

@@ -6,8 +6,8 @@
     user-select: none;
 }
 
-.js-tweet-text-container {
-    padding: 10px 0 10px;
+.js-comment-text-container {
+    padding: 0;
     color: #000;
 }
 

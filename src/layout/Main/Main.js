@@ -22,7 +22,7 @@ class Main extends Component {
                     {routeMapping.map((route, i) => (
                         <RouteWithSubRoutes key={i} {...route} />
                     ))}
-                    <Redirect from={`${pagePaths.MAIN_APP}`} to={`${pagePaths.LOGIN}`} /> 
+                    <Redirect from={`${pagePaths.MAIN_APP}`} to={`${pagePaths.LOGIN}`} />
                 </Switch>
             </BaseLayout>
         );
