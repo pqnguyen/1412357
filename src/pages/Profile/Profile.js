@@ -13,7 +13,7 @@ import moment from 'moment';
 import {getMyProfile} from "src/selectors/profile";
 
 //action creator
-import {updateProfile} from "src/redux/actionCreators/profile";
+import {updateProfile} from "src/redux/actions/profile";
 
 class Profile extends Component {
     constructor(props) {
