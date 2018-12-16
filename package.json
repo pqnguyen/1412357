@@ -8,10 +8,12 @@
     "@fortawesome/react-fontawesome": "^0.1.3",
     "antd": "^3.10.9",
     "axios": "^0.18.0",
+    "base32.js": "^0.1.0",
     "firebase": "^5.7.0",
     "i": "^0.3.6",
     "jquery": "^3.3.1",
     "moment": "^2.22.2",
+    "node-fetch": "latest",
     "npm": "^6.4.1",
     "prop-types": "latest",
     "react": "^16.6.3",
@@ -26,7 +28,9 @@
     "redux-saga": "^0.16.2",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
-    "saga": "^0.0.1"
+    "saga": "^0.0.1",
+    "stellar-base": "^0.10.0",
+    "varstruct": "^6.1.2"
   },
   "scripts": {
     "start": "react-scripts start",

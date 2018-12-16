@@ -6,6 +6,7 @@ import ProfileFollowing from "src/pages/Profile/components/ProfileFollowing/Prof
 import ProfileFollower from "src/pages/Profile/components/ProfileFollower/ProfileFollower";
 import Login from "src/pages/Login/Login";
 import AboutUs from "../pages/AboutUs/AboutUs";
+import Test from "src/components/Test/Test";
 
 const routeMapping = [
     {
@@ -37,6 +38,10 @@ const routeMapping = [
     {
         "path": pagePaths.ABOUT_US,
         "component": AboutUs,
+    },
+    {
+        "test": 'test',
+        "component": Test
     }
 ];
 
